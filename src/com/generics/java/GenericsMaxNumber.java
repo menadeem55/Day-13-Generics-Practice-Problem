@@ -1,10 +1,10 @@
 package com.generics.java;
 
-public class GenericsMaxNumber {
+public class GenericsMaxNumber<T> {
 
-	public static String maximumString(String num1, String num2, String num3) {
+	public static <T extends Comparable<T>> T maximumAmong3(T num1, T num2, T num3) {
 
-		String max = num1;
+		T max = num1;
 		if (num1.compareTo(num2) > 0 && num1.compareTo(num3) > 0)
 			max = num1;
 		else if (num2.compareTo(num1) > 0 && num2.compareTo(num3) > 0)
@@ -16,8 +16,9 @@ public class GenericsMaxNumber {
 
 	public static void main(String[] args) {
 
-		System.out.println("Maximum Number Among 3 will be: " + maximumString("Mango", "Apple", "Banana"));
-
+		System.out.println("The max Number Among 3 String is: \n " + maximumAmong3("Mango", "Apple", "Banana"));
+		System.out.println("The max Number Among 3 Integer number is : \n " + maximumAmong3(25, 38, 59));
+		System.out.println("The max Number Among 3 Float number is: \n" + maximumAmong3(33.5, 29.44, 77.25));
 	}
 
 }
