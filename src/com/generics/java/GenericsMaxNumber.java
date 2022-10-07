@@ -22,6 +22,9 @@ public class GenericsMaxNumber<T> {
 			max = num4;
 		return max;
 	}
+	public static <E> void printMax(E num1, E num2, E num3, E num4, E max) {
+		System.out.println(max);
+	}
 
 	public static void main(String[] args) {
 
