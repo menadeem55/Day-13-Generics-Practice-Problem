@@ -1,6 +1,12 @@
 package com.generics.java;
 
 public class GenericsMaxNumber<T> {
+		T num1, num2, num3;
+		public GenericsMaxNumber(T num1, T num2, T num3) {
+			this.num1 = num1;
+			this.num2 = num2;
+			this.num3 = num3;
+		}
 
 	public static <T extends Comparable<T>> T maximumAmong3(T num1, T num2, T num3) {
 
