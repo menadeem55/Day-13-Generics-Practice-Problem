@@ -8,7 +8,6 @@ public class GenericsMaxNumber<T> {
 			this.num3 = num3;
 			this.num4 = num4;
 		}
-
 	public static <T extends Comparable<T>> T maximumAmong4(T num1, T num2, T num3, T num4) {
 
 		T max = num1;
